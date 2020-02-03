@@ -1,0 +1,30 @@
+﻿version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entering install phase...
+      - aws configure set preview.cloudfront true
+      - npm install
+      - npm install -g @angular/cli
+      - aws configure set preview.cloudfront true
+  pre_build:
+    commands:
+      - echo Entering pre_build phase...
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Entering build phase...
+      - echo Build started on `date`
+      - ng build --prod
+  post_build:
+    commands:
+      - echo Entering post_build phase...
+      - echo Build completed on `date`
+      - aws s3 rm s3://REPLACE_ME --exclude 'images/*' --recursive
+      - aws s3 cp dist/ s3://REPLACE_ME/ --exclude 'index.html' --recursive --cache-control max-age=31536000
+      - aws s3 cp dist/ s3://REPLACE_ME/ --exclude '*' --include 'index.html' --recursive
+      - aws cloudfront create-invalidation --distribution-id REPLACE_ME --paths /index.html
+artifacts:
+  files:
+    - 'dist/*'

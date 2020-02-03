@@ -1,0 +1,9 @@
+<h3>Leave a reply:</h3>
+<form id="replyForm" (ngSubmit)="onSubmit()" [formGroup]="replyForm">
+    <mat-form-field class="add-comment-input">
+        <textarea matInput matTextareaAutosize minRows="4" placeholder="Write your comment here..." form="replyForm" formControlName="reply_text"></textarea>
+    </mat-form-field>
+    
+    <button mat-button class="button">Post Comment</button>
+
+</form>

@@ -1,0 +1,29 @@
+<div class="comment align-left">
+    
+    <mat-list >
+        <mat-list-item class="comment-item">
+            <img mat-line mat-list-avatar width="30" height="30" src={{comment.comment.user.photo_url}}>
+        </mat-list-item>
+        <mat-list-item class="comment-item-header">
+            <h5 mat-line>{{comment.comment.user.display_name}}</h5>
+            <h4 mat-line class="body-text"><small>{{comment.comment.comment_date | date}}</small> - <span (click)="replyToComment(comment.comment)" class="reply-button">Reply</span></h4>
+            <p mat-line class="comment-text">
+                {{comment.comment.comment_text}}
+            </p>
+        </mat-list-item>
+    </mat-list>
+
+    
+    <app-reply *ngFor="let reply of comment.replies" [reply]="reply"></app-reply>
+
+    <div  *ngIf="this.showComment">
+        <app-add-reply [comment]="comment.comment"></app-add-reply>
+    </div>
+
+    <mat-divider></mat-divider>
+    
+    
+    
+</div>
+
+

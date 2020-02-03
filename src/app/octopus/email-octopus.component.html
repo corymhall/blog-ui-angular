@@ -1,0 +1,39 @@
+<div fxLayout="column" fxLayoutAlign="start center" class="subscribe-div">
+    <mat-card>
+        <div class="email-octopus-form-wrapper">
+            <h2 class="email-octopus-heading">Subscribe to Pleasant Places Blog</h2>
+            <p class="email-octopus-success-message"></p>
+            <p class="email-octopus-error-message"></p>
+
+            <form id="octopusForm" (ngSubmit)="onSubmit()" [formGroup]="form" class="email-octopus-form">
+                <div class="">
+                    <mat-form-field class="subscribe-container">
+                        <input matInput class="subscribe-field" type="email" placeholder="Email address (required)"  formControlName="emailAddress" />
+                    </mat-form-field>
+                    <!--<label>Email address (required)</label>
+                    <input type="email" formControlName="emailAddress" class="email-octopus-email-address">-->
+                </div>
+                <div class="">
+                    <!--<label>First name</label>
+                    <input type="text" formControlName="firstName" class="email-octopus-first-name">-->
+                    <mat-form-field class="subscribe-container">
+                        <input matInput class="subscribe-field" type="text" placeholder="First name (required)"  formControlName="firstName" />
+                    </mat-form-field>
+                </div>
+                <div class="" >
+                    <!--<label>Last name</label>
+                    <input type="text" formControlName="lastName" class="email-octopus-last-name">-->
+                    <mat-form-field class="subscribe-container">
+                        <input matInput class="subscribe-field" type="text" placeholder="Last name"  formControlName="lastName" />
+                    </mat-form-field>
+                </div>
+                <div class="">
+                    <button mat-button class="button" type="submit" [disabled]="!form.valid">Subscribe</button>
+                </div>
+            </form>
+            <div class="email-octopus-rewards">
+                Powered by <a href="https://emailoctopus.com/?urli=3N9M5&utm_medium=user_referral&utm_source=builder" target="_blank">EmailOctopus</a>
+            </div>
+        </div>
+    </mat-card>
+</div>

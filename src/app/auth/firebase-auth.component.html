@@ -1,0 +1,7 @@
+<div *ngIf="this.afService.isLoggedIn" class="align-center">
+    <button mat-button  class="button" (click)="logout()">LogOut</button>
+</div>
+<div *ngIf="!this.afService.isLoggedIn" class="align-center">
+    <button mat-button  class="button" (click)="login()">Google Log-In</button>
+</div>
+

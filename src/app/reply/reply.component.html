@@ -1,0 +1,18 @@
+<div fxFlexOffset="7" class="comment align-left">
+
+    <mat-list>
+        <mat-list-item class="comment-item">
+            <img mat-line mat-list-avatar width="30" height="30" src={{reply.reply.user.photo_url}}>
+        </mat-list-item>
+        <mat-list-item class="comment-item-header">
+            <h5 mat-line>{{reply.reply.user.display_name}}</h5>
+            <h4 mat-line class="body-text"><small>{{reply.reply.reply_date | date}}</small></h4>
+            <p mat-line class="comment-text">
+                {{reply.reply.reply_text}}
+            </p>
+        </mat-list-item>
+    </mat-list>
+       
+
+
+</div>

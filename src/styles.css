@@ -1,0 +1,298 @@
+my-app .loading {
+    background-color: #80DEEA;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    margin: auto;
+    margin-top: 45vh;
+    animation: grow 1s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes grow {
+    0% { transform: scale(1.1, 1.1); opacity: 0.1; }
+    50% { transform: scale(2, 2); opacity: 0.5; }
+    100% { transform: scale(2.2, 2.2); opacity: 1; }
+}
+
+h3, ul, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width:100%;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.blog-detail {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.comment-section {
+    margin-bottom: 5rem;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.site-header a {
+    /*
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Clicker Script', cursive;
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Marck Script', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Nothing You Could Do', cursive;
+    font-family: 'Alex Brush', cursive;
+    font-family: 'Allura', cursive;
+    font-family: 'Montez', cursive;
+    font-family: 'Give You Glory', cursive;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-family: 'Zeyada', cursive;
+    font-family: 'Finger Paint', cursive;
+    font-family: 'Euphoria Script', cursive;
+    */
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size: 5em;
+    text-decoration: none;
+    color: #80DEEA;
+   
+}
+
+.site-header {
+    border: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.subscribe-div {
+    margin-bottom: 5rem;
+}
+
+.subscribe-container {
+    width: 100%;
+}
+
+.email-octopus-rewards a {
+    text-decoration: none;
+}
+
+
+.header-image {
+    width: 100%;
+}
+
+.top-bar {
+    border: 1px dotted;
+}
+
+.single-post {
+    margin-bottom: 3rem;
+    /*max-height: 43rem;*/
+    
+}
+
+
+.blog-post {
+    width: 100%;
+}
+
+.post-detail-container {
+    width: 100%;
+}
+
+.input-group-button label{
+    font-size: 0.9rem;
+    padding: 0.85em 1em;
+
+}
+
+.site-header-row {
+    width: 100%;
+}
+
+.header-text {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.body-text {
+    font-family: 'Proza Libre', sans-serif;
+}
+
+.image-div {
+    margin-bottom: 2rem;
+}
+
+.image-div img {
+    max-height: 400px;
+    border-radius: 10px;
+    width: 100%
+}
+
+.image-div-detail img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.summary-section {
+    max-height: 10rem;
+    /*height: 10rem;*/
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.profile-comment-image img {
+    width: 3rem;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1rem;
+}
+
+.comment {
+    
+}
+
+.reply-button {
+    cursor: pointer;
+}
+
+    .reply-button:hover {
+        color: #80DEEA;
+        text-decoration: underline;
+    }
+
+.comment-wrapper {
+    display: table-cell;
+    border-left: 2px solid lightgrey;
+}
+
+.mat-button.button {
+    border: .5px solid;
+    border-radius: 10px;
+    border-color: #80DEEA;
+    color: #80DEEA;
+}
+
+.button:hover {
+    border-radius: 10px;
+    background-color: #80DEEA;
+    color: white;
+}
+
+.info-section {
+    margin-bottom: 2rem;
+    margin-right: 0;
+}
+
+.info-section img {
+    border-radius: 50%;
+
+}
+
+.info-section ul li {
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+mat-drawer {
+    width: 20rem;
+}
+
+.sidenav-on.mat-icon-button {
+    /*position: absolute;
+    margin-left: 5rem;
+    margin-top: 3rem;*/
+}
+
+.sidenav-off.mat-icon-button {
+    left: 17rem;
+}
+
+.mat-icon-button:hover {
+    color: #80DEEA;
+}
+
+.mat-nav-list .mat-list-item-content:hover {
+    color: #80DEEA;
+}
+
+.summary-item.mat-list-item .mat-list-item-content .mat-list-text {
+    width: auto;
+}
+
+.comment .mat-list {
+    margin-bottom: 1rem;
+}
+
+.comment-item .mat-list-item-content .mat-list-text {
+    margin-left: 1rem;
+    border-left: solid lightgrey;
+}
+
+.comment-item .mat-list-item-content .mat-list-text .comment-text.mat-line {
+    margin-top:1rem;
+}
+
+.comment-item .mat-list-item-content {
+    float: left;
+    margin-top: .5rem;
+}
+
+.comment .comment-item-header.mat-list-item .mat-list-item-content {
+    padding: 0;
+}
+
+.comment .mat-list .comment-item-header .mat-list-item-content .mat-list-text {
+    border-left: solid lightgrey;
+    padding-left: 1rem;
+}
+
+.mat-list .comment-item-header .mat-list-item-content .mat-list-text:first-child {
+    border-left: solid lightgrey;
+    padding-left: 1rem;
+}
+
+.comment .mat-list .comment-item-header.mat-list-item .mat-list-item-content {
+    min-height: 88px;
+    height: auto;
+}
+
+.mat-list .comment-item-header .mat-list-item-content .mat-list-text .comment-text {
+    margin-top: .5rem;
+    white-space: normal;
+}
+
+.add-comment-input {
+    width: 100%;
+}
+
+.tiny-div {
+    margin-bottom: 2rem;
+}
+
+.add-comment-section {
+    margin-bottom: 5rem;
+}
+
+.textarea-container {
+    width: 100%;
+}
+
+.mat-form-field {
+    width: 100%;
+}

@@ -1,0 +1,42 @@
+﻿<div fxLayout="column" fxLayoutAlign="start center">
+    <form id="postForm" (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div fxLayout="row wrap" fxLayoutAlign="center start" fxFill>
+            <div fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="51">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Post Title" formControlName="title" />
+                </mat-form-field> 
+            </div>
+            
+
+            <div class="input-group" fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="51">
+                
+                <input fxHide type="file"  placeholder="Upload Image" (change)="onChange($event)" id="imageUpload" />
+                <label  for="imageUpload" class="mat-button button" >Upload Image</label>
+                
+               <mat-form-field>
+                   <input matInput class="input-group-field" type="text" placeholder="Image Location" value="{{ form.get('imageLocation').value }}" formControlName="imageLocation" />
+               </mat-form-field>
+                
+            </div>
+            <div fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="51">
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Author" value="{{this.afService.authState.displayName}}" />
+                </mat-form-field>
+            </div>
+            <div fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="51">
+                <mat-form-field class="textarea-container">
+                    <textarea matInput maxlength="700" placeholder="Home Page Display Text" formControlName="homeText"></textarea>
+                </mat-form-field>
+            </div>
+            <div fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="51" class="tiny-div">
+                <tiny-editor [group]="form" [elementId]="'my-editor-id'" (onEditorKeyup)="keyupHandlerFunction($event)"></tiny-editor>
+            </div>
+            <div fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="51">
+                <button mat-button type="submit" class="button" [disabled]="!form.valid" >Submit</button>
+            </div>
+            
+        </div>
+            
+    </form>
+</div>
+

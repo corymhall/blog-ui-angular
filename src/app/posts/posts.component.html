@@ -1,0 +1,33 @@
+<div *ngIf="isLoaded" fxLayout="column" fxLayoutAlign="start center">
+    <div fxLayout="row" fxLayoutAlign="center start" class="blog-post" *ngFor="let post of posts">
+        <div fxFlex="95" fxFlex.mat="85" fxFlex.gt-sm="60" fxFlex.xl="50" class="single-post">
+            <div class="image-div">
+                <img  class="cover-image" src={{post.post.image_location}}>
+            </div>
+            <div *ngIf="isCreator" class="post-title align-left ">
+                <h3 class="header-text">{{post.post.title}} - <span (click)="editPost(post)" class="reply-button">Edit</span></h3>
+            </div>
+            <div *ngIf="!isCreator" (click)="gotoDetail(post)" class="post-title align-left ">
+              <h3 class="header-text">{{post.post.title}}</h3>
+            </div>
+            <div class="info-section">
+                <mat-list>
+                    <mat-list-item class="summary-item">
+                        <img mat-line mat-list-avatar width="30" height="30" src={{post.post.user.photo_url}}>
+                        <h5 mat-line>{{post.post.user.display_name}}</h5>
+                    <mat-list-item>
+                        <h4 mat-line class="body-text"><small>{{post.post.posted_date | date}}</small></h4>
+                    </mat-list-item>
+                    </mat-list-item>
+                </mat-list>
+            </div>
+            <div class="summary-section">
+                <div class="body-text" innerHtml="{{post.post.home_text}}"></div>
+            </div>
+            <div class="align-left">
+                <button mat-button color="" (click)="gotoDetail(post.post)" class="button">Read More</button>
+            </div>
+        </div>
+    </div>
+    <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+</div>
