@@ -32,7 +32,7 @@
     "imports-loader": "^0.8.0",
     "jquery": "^3.1.1",
     "rxjs": "^6.3.3",
-    "tinymce": "4.7.4",
+    "tinymce": "5.6.0",
     "tslib": "^1.9.0",
     "web-animations-js": "^2.2.2",
     "zone.js": "^0.8.26"
